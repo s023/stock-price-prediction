@@ -2,9 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Stock Price Prediction</title>
+    <title>Stock Price Prediction API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        code {
+            background: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #c7254e;
+        }
+        pre {
+            text-align: left;
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            color: #c7254e;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Stock Price Prediction API</h1>
+    <div class="container">
+        <h1>Welcome to the Stock Price Prediction API</h1>
+        <p>To get a stock price prediction, send a <code>POST</code> request to the endpoint:</p>
+        <pre>/predict</pre>
+        <p>with the following JSON payload format is expected <br> Values are here just for example:</p>
+        <pre>[
+    {
+        "Open": 66.9495,
+        "High": 67.5375,
+        "Low": 66.134499,
+        "Adj Close": 65.862062,
+        "Volume": 13467952,
+        "Solar": 44728.0,
+        "Wind": 43038.0,
+        "MA_5": 66.465401,
+        "MA_10": 68.416217,
+        "Close_Lag1": 66.6165,
+        "Solar_Lag1": 57698.0,
+        "Wind_Lag1": 32186.0
+    }
+]</pre>
+        <p>You will receive a JSON response with the predicted stock price.</p>
+    </div>
 </body>
 </html>
