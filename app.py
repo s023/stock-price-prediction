@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from joblib import load
 import pandas as pd
 import os
@@ -12,7 +12,7 @@ model = load(model_path)
 
 @app.route('/')
 def home():
-    return "Stock Price Prediction API"
+    return render_template('index.html')
 
 
 @app.route('/predict', methods=['POST'])
