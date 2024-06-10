@@ -39,3 +39,23 @@ https://stock-price-prediction-2qcg.onrender.com
 
 To get a stock price prediction, send a POST request to the following endpoint:
 https://stock-price-prediction-2qcg.onrender.com/predict
+
+### Example JSON Payload
+
+````json
+[
+    {
+        "Open": 66.9495,
+        "High": 67.5375,
+        "Low": 66.134499,
+        "Adj Close": 65.862062,
+        "Volume": 13467952,
+        "Solar": 44728.0,
+        "Wind": 43038.0,
+        "MA_5": 66.465401,
+        "MA_10": 68.416217,
+        "Close_Lag1": 66.6165,
+        "Solar_Lag1": 57698.0,
+        "Wind_Lag1": 32186.0
+    }
+]
